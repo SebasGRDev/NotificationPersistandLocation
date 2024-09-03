@@ -88,6 +88,9 @@ class MainActivity : AppCompatActivity() {
                 if (result != null) {
                     tvLocationLatitude.text = "Latitude: ${result.latitude}"
                     tvLocationLongitude.text = "Longitude: ${result.longitude}"
+                } else {
+                    Toast.makeText(this@MainActivity, getString(R.string.location_enable_required), Toast.LENGTH_SHORT)
+                        .show()
                 }
             }
         }

@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">EjercicioComplementario</string>
+    <string name="app_name">Notification Persistand Location</string>
     <string name="permission_granted">Permiso concedido!</string>
     <string name="ok">Ok</string>
     <string name="permission_required">Concede permisos de localización desde los ajustes de tu teléfono.</string>
+    <string name="location_enable_required">Por favor, enciende la ubicación de tu dispositivo.</string>
 </resources>
