@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "804213172731",
+    "project_id": "notification-persist-project",
+    "storage_bucket": "notification-persist-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:804213172731:android:701c72a3fbeec7f66b835e",
+        "android_client_info": {
+          "package_name": "com.sebasgrdev.ejerciciocomplementario"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsii4vuSpmHrtLQQV9WXhFFITOhMV550A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
