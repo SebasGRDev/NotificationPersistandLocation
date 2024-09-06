@@ -14,13 +14,35 @@ import android.widget.Button
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.asLiveData
 import androidx.navigation.NavDeepLinkBuilder
+import androidx.recyclerview.widget.RecyclerView
+import androidx.room.Room
 import com.google.android.material.textfield.TextInputEditText
+import com.sebasgrdev.ejerciciocomplementario.AppDatabaseRoom
 import com.sebasgrdev.ejerciciocomplementario.MainActivity
 import com.sebasgrdev.ejerciciocomplementario.MyApp
+import com.sebasgrdev.ejerciciocomplementario.NotificationAdapter
+import com.sebasgrdev.ejerciciocomplementario.NotificationEntity
+import com.sebasgrdev.ejerciciocomplementario.NotificationsDao
+import com.sebasgrdev.ejerciciocomplementario.NotificationsViewModel
+import com.sebasgrdev.ejerciciocomplementario.NotificationsViewModelFactory
 import com.sebasgrdev.ejerciciocomplementario.R
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class SendNotificationFragment : Fragment(R.layout.fragment_send_notification) {
+
+    private lateinit var db:AppDatabaseRoom
+    private lateinit var notificationsDao: NotificationsDao
+
+    private val notificationsViewModel: NotificationsViewModel by activityViewModels {
+        NotificationsViewModelFactory(notificationsDao)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,6 +56,8 @@ class SendNotificationFragment : Fragment(R.layout.fragment_send_notification) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        initializeDatabase()
+
         val titleNotification = view.findViewById<TextInputEditText>(R.id.etTitleSendNotification)
         val bodyNotification = view.findViewById<TextInputEditText>(R.id.etBodySendNotification)
         val btnSendNotification = view.findViewById<Button>(R.id.btnSendLocalNotification)
@@ -45,7 +69,16 @@ class SendNotificationFragment : Fragment(R.layout.fragment_send_notification) {
             val body = bodyNotification.text.toString()
             createLocalNotification(title, body)
         }
+    }
 
+    private fun initializeDatabase() {
+        db = Room.databaseBuilder(
+            requireContext().applicationContext,
+            AppDatabaseRoom::class.java,
+            "mibasededatos"
+        ).build()
+
+        notificationsDao = db.notificationsDao()
     }
 
     fun createChannel() {
@@ -70,7 +103,8 @@ class SendNotificationFragment : Fragment(R.layout.fragment_send_notification) {
             putExtra("fragment_id", R.id.notificationNav)
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         }
-        val pendingIntent = PendingIntent.getActivity(requireContext(), 0, intent, PendingIntent.FLAG_IMMUTABLE)
+        val pendingIntent =
+            PendingIntent.getActivity(requireContext(), 0, intent, PendingIntent.FLAG_IMMUTABLE)
 
         val notificationManager =
             requireActivity().getSystemService(NotificationManager::class.java)
@@ -84,5 +118,9 @@ class SendNotificationFragment : Fragment(R.layout.fragment_send_notification) {
             .build()
         notificationManager.notify(1, builder)
 
+        val notificationEntity = NotificationEntity(title = title, body = body)
+        CoroutineScope(Dispatchers.IO).launch {
+            notificationsDao.insertNotification(notificationEntity)
+        }
     }
 }
