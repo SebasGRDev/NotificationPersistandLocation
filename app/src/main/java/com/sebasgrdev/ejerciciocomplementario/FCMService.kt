@@ -32,7 +32,6 @@ class FCMService : FirebaseMessagingService() {
                 "mibasededatos"
             ).build()
             database.notificationsDao().insertNotification(notification)
-
         }
 
         showNotification(message)

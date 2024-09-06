@@ -38,6 +38,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -48,7 +51,6 @@ dependencies {
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
     implementation (libs.material.v180)
-
 
     //Corrutinas
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -63,6 +65,13 @@ dependencies {
     implementation(libs.androidx.room.ktx)
     annotationProcessor(libs.androidx.room.compiler.v261)
     kapt(libs.androidx.room.compiler.v261)
+    //Navigation Components
+    implementation(libs.androidx.navigation.runtime.ktx)
+    implementation (libs.androidx.navigation.ui.ktx)
+    //Fragments
+    implementation(libs.androidx.navigation.fragment.ktx)
+    implementation(libs.androidx.fragment)
+    implementation(libs.androidx.fragment.ktx)
 
     //RecyclerView
     implementation(libs.androidx.recyclerview)
