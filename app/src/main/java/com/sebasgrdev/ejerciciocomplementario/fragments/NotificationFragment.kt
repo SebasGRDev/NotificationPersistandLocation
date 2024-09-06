@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.asLiveData
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -26,7 +27,7 @@ class NotificationFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: NotificationAdapter
 
-    private val notificationsViewModel: NotificationsViewModel by viewModels {
+    private val notificationsViewModel: NotificationsViewModel by activityViewModels {
         NotificationsViewModelFactory(notificationsDao)
     }
 
