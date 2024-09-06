@@ -1,8 +1,10 @@
-package com.sebasgrdev.ejerciciocomplementario
+package com.sebasgrdev.ejerciciocomplementario.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
+import com.sebasgrdev.ejerciciocomplementario.NotificationEntity
+import com.sebasgrdev.ejerciciocomplementario.NotificationsDao
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

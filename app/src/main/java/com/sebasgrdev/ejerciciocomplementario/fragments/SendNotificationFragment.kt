@@ -14,35 +14,22 @@ import android.widget.Button
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.asLiveData
-import androidx.navigation.NavDeepLinkBuilder
-import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
 import com.google.android.material.textfield.TextInputEditText
 import com.sebasgrdev.ejerciciocomplementario.AppDatabaseRoom
 import com.sebasgrdev.ejerciciocomplementario.MainActivity
 import com.sebasgrdev.ejerciciocomplementario.MyApp
-import com.sebasgrdev.ejerciciocomplementario.NotificationAdapter
 import com.sebasgrdev.ejerciciocomplementario.NotificationEntity
 import com.sebasgrdev.ejerciciocomplementario.NotificationsDao
-import com.sebasgrdev.ejerciciocomplementario.NotificationsViewModel
-import com.sebasgrdev.ejerciciocomplementario.NotificationsViewModelFactory
 import com.sebasgrdev.ejerciciocomplementario.R
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class SendNotificationFragment : Fragment(R.layout.fragment_send_notification) {
 
     private lateinit var db:AppDatabaseRoom
     private lateinit var notificationsDao: NotificationsDao
-
-    private val notificationsViewModel: NotificationsViewModel by activityViewModels {
-        NotificationsViewModelFactory(notificationsDao)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
