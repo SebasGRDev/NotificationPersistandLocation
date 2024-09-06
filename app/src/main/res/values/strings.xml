@@ -4,4 +4,14 @@
     <string name="ok">Ok</string>
     <string name="permission_required">Concede permisos de localización desde los ajustes de tu teléfono.</string>
     <string name="location_enable_required">Por favor, enciende la ubicación de tu dispositivo.</string>
+
+    <string name="TopBarTitleLocation">Localización</string>
+    <string name="TopBarTitleNotifications">Notificaciones</string>
+    <string name="TopBarTitleSendNotifications">Enviar Notificación</string>
+
+    <string name="nav_send_title">Enviar</string>
+    <string name="nav_notification_title">Notificaciones</string>
+    <string name="nav_location_title">Localización</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

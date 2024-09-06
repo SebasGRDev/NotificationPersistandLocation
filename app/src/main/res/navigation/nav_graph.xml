@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/sendNav">
+
+    <fragment
+        android:id="@+id/sendNav"
+        android:name="com.sebasgrdev.ejerciciocomplementario.fragments.SendNotificationFragment"
+        android:label="fragment_send_notification"
+        tools:layout="@layout/fragment_send_notification" />
+    <fragment
+        android:id="@+id/notificationNav"
+        android:name="com.sebasgrdev.ejerciciocomplementario.fragments.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/locationNav"
+        android:name="com.sebasgrdev.ejerciciocomplementario.fragments.LocationFragment"
+        android:label="fragment_location"
+        tools:layout="@layout/fragment_location" />
+</navigation>
