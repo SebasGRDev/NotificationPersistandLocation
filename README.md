@@ -19,12 +19,17 @@
 - **Fragments** para las pantallas.
 
 # Recibe notificaciones desde Firebase 🔥
+### La aplicación está diseñada para recibir notificacioens enviadas desde Firebase, si se requiern pruebas el token se puede encontrar en los **logs**
 ![01](https://github.com/user-attachments/assets/0156f64d-f1de-4fb6-9fa0-0a5bb8c88a78) 
 # Envíalas también de forma local!
+### Se añadió una pantalla para mandar notificaciones de forma local y así previsualizar la recepción de las push.
 ![02](https://github.com/user-attachments/assets/ef717cf9-6af0-4243-bce4-a5f2c5f6165a)
 # Se guardan con Room para mostrarse en la pantalla de notificaciones
+### Se usó **Room** y **RecyclerView** para la pantalla donde se mostrarán todas las notificaciones recibidas, tanto locales como de Firebase.
 ![03](https://github.com/user-attachments/assets/66103c46-5028-4e9a-ba74-7b1c4e7cf6c6)
 # ¡Obten tus coordenadas actuales!
+### Se usan los servicios de localización para obtener las coordenadas y pintarlas en pantalla.
 ![04](https://github.com/user-attachments/assets/8ce4b5a0-4b1d-4543-8a3e-70fd5878e93c)
 # Se te solicitaran permisos de ubicación
+### Se gestionan los permisos necesarios para obtener la localización.
 ![05](https://github.com/user-attachments/assets/724edb6d-6a79-4ef4-aa62-e3c15df433e3)
