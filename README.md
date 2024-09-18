@@ -20,16 +20,21 @@
 
 # Recibe notificaciones desde Firebase 🔥
 ### La aplicación está diseñada para recibir notificacioens enviadas desde Firebase, si se requiern pruebas el token se puede encontrar en los **logs**
-![01](https://github.com/user-attachments/assets/0156f64d-f1de-4fb6-9fa0-0a5bb8c88a78) 
+![image](https://github.com/user-attachments/assets/55215906-6b7e-4595-9673-233c04f9c433)
+
 # Envíalas también de forma local!
 ### Se añadió una pantalla para mandar notificaciones de forma local y así previsualizar la recepción de las push.
-![02](https://github.com/user-attachments/assets/ef717cf9-6af0-4243-bce4-a5f2c5f6165a)
+![image](https://github.com/user-attachments/assets/d7edeb4d-7fcc-48ce-ab5f-26464a1eed68)
+
 # Se guardan con Room para mostrarse en la pantalla de notificaciones
 ### Se usó **Room** y **RecyclerView** para la pantalla donde se mostrarán todas las notificaciones recibidas, tanto locales como de Firebase.
-![03](https://github.com/user-attachments/assets/66103c46-5028-4e9a-ba74-7b1c4e7cf6c6)
+![image](https://github.com/user-attachments/assets/02e5158d-d970-47e7-9a20-6852b8e5539c)
+
 # ¡Obten tus coordenadas actuales!
 ### Se usan los servicios de localización para obtener las coordenadas y pintarlas en pantalla.
-![04](https://github.com/user-attachments/assets/8ce4b5a0-4b1d-4543-8a3e-70fd5878e93c)
+![image](https://github.com/user-attachments/assets/d87da01f-ed26-46ab-9037-0777fd964ee0)
+
 # Se te solicitaran permisos de ubicación
 ### Se gestionan los permisos necesarios para obtener la localización.
-![05](https://github.com/user-attachments/assets/724edb6d-6a79-4ef4-aa62-e3c15df433e3)
+![image](https://github.com/user-attachments/assets/b7301562-bce3-4fd9-ba26-cb0a0b2b7de2)
+
