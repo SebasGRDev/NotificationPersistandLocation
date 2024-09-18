@@ -5,6 +5,19 @@
 
 ![image](https://github.com/user-attachments/assets/cb4d98d3-0d84-4433-8933-634c0c7e5bdc)
 
+## Tecnologías usadas:
+- Lenguaje de programación **Kotlin**.
+- **Firebase** para el servicio de notificaciones.
+- **Room** para almacenar las notificaciones recibidas.
+- Servicios de **Geolocalización**.
+- Gestión de **permisos**
+- Arquitectura **MVVM**.
+- **LiveData**.
+- **Corrutinas**.
+- **Navigation Components**.
+- **RecyclerViews** para la pantalla de notificaciones.
+- **Fragments** para las pantallas.
+
 # Recibe notificaciones desde Firebase 🔥
 ![01](https://github.com/user-attachments/assets/0156f64d-f1de-4fb6-9fa0-0a5bb8c88a78) 
 # Envíalas también de forma local!
