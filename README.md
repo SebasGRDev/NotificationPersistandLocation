@@ -1,5 +1,8 @@
 # Combina la potencia de Firebase con la seguridad de SQLite para ofrecerte una experiencia personalizada. Recibe notificaciones, guarda tu ubicación y accede a tu información en cualquier momento.
 
+## Definición del proyecto: 
+### Aplicación que utiliza los servicios de **Firebase** para recibir notificaciones push, las cuales se almacenaran en una pantalla de notificaciones usando **Room**. También se podrán enviar notificaciones de manera local para previsualizar su recepción. La aplicación tendrá que solicitar los **permisos de geolocalización** al ser instalada y en una de las pantallas **mostrar las coordenadas actuales** al momento de presionar el botón. Se usarán los **Navigation Components** para navegar entre los 3 **Fragments** usando la barra de navegación. 
+
 ![image](https://github.com/user-attachments/assets/cb4d98d3-0d84-4433-8933-634c0c7e5bdc)
 
 # Recibe notificaciones desde Firebase 🔥
